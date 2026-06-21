@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CirclePack-J5.2 (CheerpJ)</title>
+    <script src="4.3/loader.js"></script>
+    <style>
+      body {
+        margin: 0;
+        background: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function execCb(cmdPath, argsArray) {
+        if (cmdPath == "xdg-open") {
+          window.open(argsArray, "_blank");
+        }
+      }
+
+      (async function () {
+        await cheerpjInit({ 
+          version: 11, 
+          enableDebug: true, 
+          execCallback: execCb,
+          systemProperties: { 
+            "user.home": "/str", 
+            "user.dir": "/app/CirclePack-in-Browser"
+          }
+        });
+
+        cheerpjCreateDisplay(1400, 850);
+        await cheerpjRunJar("/app/CirclePack-in-Browser/CirclePack-J5.2/cpcore.jar");
+      })();
+    </script>
+  </body>
+</html>
