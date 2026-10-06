@@ -4,7 +4,7 @@ The cpcore.jar is built using apache ant from a patched source: https://github.c
 
 Drag and drop is fixed. packings and scripts are in `/app/cpcore/packings` and `/app/cpcore/scripts` respectively.
 
-The app built using the closed source cheerpj is moved to https://github.com/wangyenshu/CirclePack-cheerpj.
+The old app built using the closed source cheerpj is moved to https://github.com/wangyenshu/CirclePack-cheerpj.
 
 Credit:
 
